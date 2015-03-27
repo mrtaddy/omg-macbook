@@ -6,16 +6,24 @@ homebrew_packages_taps:
 homebrew_packages_packages:
   - { name: git }
   - { name: imagemagick }
+  - { name: nodejs }
   - { name: phantomjs }
   - { name: ssh-copy-id }
 homebrew_cask_packages_packages:
   - flash
-  - firefox
   - github
   - google-drive
   - google-hangouts
-  - google-japanese-ime
   - java
   - mysql55-mavericks
   - qt4-mac
   - skype
+  - slack
+  # MySQL Client
+  # - mysqlworkbench
+  # - sequel-pro
+  # Editor
+  # - atom
+  # - sublime-text
+  # - macvim
+  # etc..
