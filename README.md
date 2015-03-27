@@ -6,7 +6,7 @@ OMGで開発に必要なパッケージをインストールします
 
 #### 1. Xcodeをダウンロードしてコマンドラインツールをインストールする
 
-  * https://developer.apple.com/jp/
+  * [Apple Developer Site](link-apple)
 
 ```
 xcode-select --install
@@ -16,10 +16,14 @@ xcode-select --install
 
 ![](https://raw.githubusercontent.com/mrtaddy/omg-macbook/master/images/fork_button.png)
 
-#### 3. インストールしたいソフトを `roles/homebrew/vars/main.yml` に追加する
+#### 3. インストールしたいソフトを追加する
 
-  * https://github.com/Homebrew/homebrew/tree/master/Library/Formula
-  * https://github.com/phinze/homebrew-cask/tree/master/Casks
+  * 追加先
+    * [roles/homebrew/vars/main.yml](link-main-yaml)
+
+  * 参照先
+    * [Formula](link-formula)
+    * [Casks](link-casks)
 
 #### 4. aisibleのインストール
 
@@ -42,3 +46,8 @@ rake playbook:homebrew  # ansible-playbook -i hosts -vv localhost.yml -t homebre
 rake playbook:rbenv     # ansible-playbook -i hosts -vv localhost.yml -t rbenv
 rake setup              # setup ansible
 ```
+
+[link-apple]:https://developer.apple.com/jp/
+[link-formula]:https://github.com/Homebrew/homebrew/tree/master/Library/Formula
+[link-casks]:https://github.com/phinze/homebrew-cask/tree/master/Casks
+[link-main-yml]:https://github.com/mrtaddy/omg-macbook/blob/master/roles/homebrew/vars/main.yml
