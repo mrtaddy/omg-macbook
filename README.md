@@ -63,7 +63,7 @@ rake       #=> ansible playbook
 - slack
 
 ### ruby
-- cruby 2.0.0
+- CRuby 2.0.0-p643
 
 ### ruby gems
 - bundler
