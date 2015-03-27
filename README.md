@@ -19,7 +19,7 @@ xcode-select --install
 ### 3. インストールしたいソフトを追加する
 
   * 追加先
-    * [roles/homebrew/vars/main.yml](link-main-yaml)
+    * [roles/homebrew/vars/main.yml](https://github.com/mrtaddy/omg-macbook/blob/master/roles/homebrew/vars/main.yml)
 
   * 参照先
     * [Formula](link-formula)
@@ -83,4 +83,3 @@ rake setup              # setup ansible
 [link-apple]:https://developer.apple.com/jp/
 [link-formula]:https://github.com/Homebrew/homebrew/tree/master/Library/Formula
 [link-casks]:https://github.com/phinze/homebrew-cask/tree/master/Casks
-[link-main-yml]:https://github.com/mrtaddy/omg-macbook/blob/master/roles/homebrew/vars/main.yml
