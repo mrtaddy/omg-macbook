@@ -4,7 +4,7 @@ Ansibleを利用してOMGで開発に必要なパッケージをインストー�
 
 ## 利用方法
 
-#### 1. Xcodeをダウンロードしてコマンドラインツールをインストールする
+### 1. Xcodeをダウンロードしてコマンドラインツールをインストールする
 
   * [Apple Developer Site](link-apple)
 
@@ -12,11 +12,11 @@ Ansibleを利用してOMGで開発に必要なパッケージをインストー�
 xcode-select --install
 ```
 
-#### 2. このリポジトリをForkする
+### 2. このリポジトリをForkする
 
 ![](https://raw.githubusercontent.com/mrtaddy/omg-macbook/master/images/fork_button.png)
 
-#### 3. インストールしたいソフトを追加する
+### 3. インストールしたいソフトを追加する
 
   * 追加先
     * [roles/homebrew/vars/main.yml](link-main-yaml)
@@ -25,19 +25,52 @@ xcode-select --install
     * [Formula](link-formula)
     * [Casks](link-casks)
 
-#### 4. aisibleのインストール
+### 4. aisibleのインストール
 
 ```
 rake setup #=> install ansible your mac
 ```
 
-#### 5. パッケージのインストール
+### 5. パッケージのインストール
 
 ```
 rake       #=> ansible playbook
 ```
 
-## 参考
+
+## 標準でインストールされるパッケージ
+
+### homebrew
+- git
+- imagemagick
+- nodejs
+- phantomjs
+- rbenv
+- ruby-build
+- rbenv-default-gems
+- readline
+- openssl
+
+### hombrew-cask
+- flash
+- github
+- google-drive
+- google-hangouts
+- java
+- mysql55-mavericks
+- qt4-mac
+- skype
+- slack
+
+### ruby
+- cruby 2.0.0
+
+### ruby gems
+- bundler
+- ec2ssh
+
+
+## rake -T
 
 ```
 $ rake -T
