@@ -1,0 +1,27 @@
+---
+- template: src=default-gems dest=~/.rbenv/default-gems
+
+- homebrew: name={{ item }} state=latest
+  with_items:
+    - rbenv
+    - ruby-build
+    - rbenv-default-gems
+    - readline
+
+- homebrew: name=openssl state=linked install_options=force
+
+- shell: >
+    eval "$(rbenv init -)";
+    rbenv install {{ ruby_version }}
+    creates=~/.rbenv/versions/{{ ruby_version }}
+
+- shell: >
+    eval "$(rbenv init -)";
+    rbenv global
+  register: current_ruby_version
+  changed_when: false
+
+- shell: >
+    eval "$(rbenv init -)";
+    rbenv global {{ ruby_version }}
+  when: current_ruby_version.stdout != ruby_version

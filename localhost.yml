@@ -2,52 +2,6 @@
   connection: local
   gather_facts: no
   sudo: no
-    ruby_version: 2.0.0
-    homebrew_packages_taps:
-      - motemen/ghq
-      - caskroom/cask
-      - mrtaddy/versions
-    homebrew_packages_packages:
-      - { name: brew-cask }
-      - { name: coreutils }
-      - { name: git }
-      - { name: imagemagick }
-      - { name: openssl }
-      - { name: phantomjs }
-      - { name: rbenv }
-      - { name: ruby-build }
-      - { name: readline }
-      - { name: ssh-copy-id }
-    homebrew_cask_packages_packages:
-      - dropbox
-      - flash
-      - firefox
-      - github
-      - google-drive
-      - google-hangouts
-      - google-japanese-ime
-      - java
-      - mysql55-mavericks
-      - qt4-mac
-      - skype
-  tasks:
-    - name: rbenv install
-      shell: >
-        eval "$(rbenv init -)";
-        rbenv install {{ ruby_version }}
-        creates=~/.rbenv/versions/{{ ruby_version }}
-    - name: get current ruby version
-      shell: >
-        eval "$(rbenv init -)";
-        rbenv global
-      register: current_ruby_version
-      changed_when: false
-    - name: rbenv global
-      shell: >
-        eval "$(rbenv init -)";
-        rbenv global {{ ruby_version }}
-      when: current_ruby_version.stdout != ruby_version
   roles:
-    - hnakamur.homebrew-packages
-    - hnakamur.homebrew-cask-packages
-    - hnakamur.atom-packages
+    - { role: homebrew, tags: 'homebrew' }
+    - { role: rbenv, tags: 'rbenv' }

@@ -1,0 +1,4 @@
+---
+dependencies:
+  - hnakamur.homebrew-packages
+  - hnakamur.homebrew-cask-packages
