@@ -81,26 +81,6 @@ rake setup              # setup ansible
 ```
 
 
-## MySQLのロードエラーについて
-
-以下のようにMySQLのロードエラーが発生した場合
-
-```
-LoadError: dlopen(/Users/kazunari/.rbenv/versions/2.0.0-p643/lib/ruby/gems/2.0.0/gems/mysql2-0.3.18/lib/mysql2/mysql2.bundle, 9): Library not loaded: libmysqlclient.18.dylib
-  Referenced from: /Users/kazunari/.rbenv/versions/2.0.0-p643/lib/ruby/gems/2.0.0/gems/mysql2-0.3.18/lib/mysql2/mysql2.bundle
-  Reason: image not found - /Users/kazunari/.rbenv/versions/2.0.0-p643/lib/ruby/gems/2.0.0/gems/mysql2-0.3.18/lib/mysql2/mysql2.bundle
-/Users/user/Develop/omg-retail/config/application.rb:11:in `<top (required)>'
-/Users/user/Develop/omg-retail/Rakefile:4:in `require'
-/Users/user/Develop/omg-retail/Rakefile:4:in `<top (required)>'
-(See full trace by running task with --trace)
-```
-
-リンクを貼ると解消します
-
-```
-sudo ln -fs /usr/local/mysql/lib/libmysqlclient.18.dylib /usr/lib/libmysqlclient.18.dylib
-```
-
 [link-apple]:https://developer.apple.com/jp/
 [link-formula]:https://github.com/Homebrew/homebrew/tree/master/Library/Formula
 [link-casks]:https://github.com/phinze/homebrew-cask/tree/master/Casks
