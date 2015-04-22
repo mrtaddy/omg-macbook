@@ -25,13 +25,17 @@ xcode-select --install
     * [Formula](link-formula)
     * [Casks](link-casks)
 
-### 4. aisibleのインストール
+### 4. githubにpublic keyを追加する
+
+`git@github.com:mrtaddy/omg-macbook.git`でcloneできるようにする
+
+### 5. aisibleのインストール
 
 ```
 rake setup #=> install ansible your mac
 ```
 
-### 5. パッケージのインストール
+### 6. パッケージのインストール
 
 ```
 rake       #=> ansible playbook
