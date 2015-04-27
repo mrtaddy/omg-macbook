@@ -1,4 +1,8 @@
 ---
+- shell: >
+    mkdir ~/.rbenv
+    creates=~/.rbenv/
+
 - template: src=default-gems dest=~/.rbenv/default-gems
 
 - homebrew: name={{ item }} state=latest
