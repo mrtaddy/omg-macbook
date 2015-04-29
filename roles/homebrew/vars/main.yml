@@ -1,20 +1,20 @@
 ---
 homebrew_packages_taps:
   - caskroom/cask
-  - mrtaddy/casks
+  - homebrew/versions
 homebrew_packages_packages:
   - { name: git }
   - { name: imagemagick }
   - { name: nodejs }
   - { name: phantomjs }
+  - { name: mysql55 }
+  - { name: qt4 }
 homebrew_cask_packages_packages:
   - flash
   - github
   - google-drive
   - google-hangouts
   - java
-  - mysql55-mavericks
-  - qt4-mac
   - skype
   - slack
   # MySQL Client
