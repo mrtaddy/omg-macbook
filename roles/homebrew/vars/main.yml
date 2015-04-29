@@ -1,6 +1,5 @@
 ---
 homebrew_packages_taps:
-  - motemen/ghq
   - caskroom/cask
   - mrtaddy/casks
 homebrew_packages_packages:
