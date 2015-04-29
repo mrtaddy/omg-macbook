@@ -41,6 +41,8 @@ namespace :ansible do
     @installed_roles ||= YAML.load(`ansible-galaxy list`).map do |line|
       line.split(',').first
     end
+  rescue
+    []
   end
 
   task :galaxy do
